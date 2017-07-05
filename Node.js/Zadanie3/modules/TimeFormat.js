@@ -1,12 +1,11 @@
 function format (seconds) {
     var formatTime = function (seconds) {
-        var zero = 0,
-            skipTimePart = '',
-            HH = Math.floor(seconds / 3600) !== zero ? Math.floor(seconds / 3600) + ' godz. ' : skipTimePart,
-            mm =  Math.floor(seconds % 3600 / 60) !== zero || HH !== skipTimePart ? Math.floor(seconds % 3600 / 60) + ' min. ' : skipTimePart,
-            ss = Math.floor(seconds % 3600 % 60) + ' sek.';
+        var skipTimePart = '',
+            hours = Math.floor(seconds / 3600) !== 0 ? Math.floor(seconds / 3600) + ' godz. ' : skipTimePart,
+            minutes =  Math.floor(seconds % 3600 / 60) !== 0 || hour !== skipTimePart ? Math.floor(seconds % 3600 / 60) + ' min. ' : skipTimePart,
+            seconds = Math.floor(seconds % 3600 % 60) + ' sek.';
         
-        return (HH + mm + ss);
+        return (hours + minutes + seconds);
     };
 
     if (typeof seconds !== 'number' || isNaN(seconds) || seconds < 0) {

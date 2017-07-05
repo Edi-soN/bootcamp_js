@@ -17,4 +17,3 @@ function format (seconds) {
 }
 
 exports.format = format;
-

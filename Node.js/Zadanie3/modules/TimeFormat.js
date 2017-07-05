@@ -2,7 +2,7 @@ function format (seconds) {
     var formatTime = function (seconds) {
         var skipTimePart = '',
             hours = Math.floor(seconds / 3600) !== 0 ? Math.floor(seconds / 3600) + ' godz. ' : skipTimePart,
-            minutes =  Math.floor(seconds % 3600 / 60) !== 0 || hour !== skipTimePart ? Math.floor(seconds % 3600 / 60) + ' min. ' : skipTimePart,
+            minutes =  Math.floor(seconds % 3600 / 60) !== 0 || hours !== skipTimePart ? Math.floor(seconds % 3600 / 60) + ' min. ' : skipTimePart,
             seconds = Math.floor(seconds % 3600 % 60) + ' sek.';
         
         return (hours + minutes + seconds);

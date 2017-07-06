@@ -1,4 +1,5 @@
 var fs = require('fs');
+var formidable = require('formidable');
 
 exports.welcome = function(request, response) {
     console.log("Rozpoczynam obsługę żądania welcome.");
@@ -9,18 +10,16 @@ exports.welcome = function(request, response) {
     });
 }
 
-var formidable = require('formidable');
-
 exports.upload = function(request, response) {
-    console.log("Rozpoczynam obsługę żądania upload.");
     var form = new formidable.IncomingForm();
+    console.log("Rozpoczynam obsługę żądania upload.");
     form.parse(request, function(error, fields, files) {
         fs.renameSync(files.upload.path, "test.png");
         fs.readFile('templates/upload.html', function(err, html) {
-        response.writeHead(200, {"Content-Type": "text/html"});
-        response.write(html);
-        response.end();
-    });
+            response.writeHead(200, {"Content-Type": "text/html"});
+            response.write(html);
+            response.end();
+        });
     });
 }
 
@@ -42,5 +41,5 @@ exports.error = function(request, response) {
             response.write(new Buffer(data).toString('base64'));
             response.write('"/></body></html>');
             response.end();
-        })
+    });
 }

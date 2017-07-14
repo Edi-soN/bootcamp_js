@@ -11,7 +11,6 @@ App = React.createClass({
     },
 
     handleSearch: function(searchingText) {  
-        //var me = this;
         this.setState({
             loading: true  
         });

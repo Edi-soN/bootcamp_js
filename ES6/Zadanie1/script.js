@@ -2,7 +2,7 @@
 {
     const hello = 'Hello';
     const world = 'World';
-    const sayHello = (arg1, arg2) => { return `${arg1} ${arg2}`};
+    const sayHello = (arg1, arg2) => `${arg1} ${arg2}`;
     document.write(`${sayHello(hello, world)}<br/><br/>`);
 }
 

@@ -25,14 +25,12 @@ class Stopwatch {
     }
 
     add() {
-        //const ul = document.getElementById('list');
         const li = document.createElement('li');
         li.innerText = this.format(this.times);
         this.ul.appendChild(li);
     }
 
     removeAll(){
-        //const ul = document.getElementById('list');
         this.ul.innerHTML = '';
     }
 

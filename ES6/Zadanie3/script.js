@@ -4,6 +4,7 @@ class Stopwatch {
         this.display = display;
         this.reset();
         this.print(this.times);
+        this.ul = document.getElementById('list');
     }
 
     reset() {
@@ -24,15 +25,15 @@ class Stopwatch {
     }
 
     add() {
-        const ul = document.getElementById('list');
+        //const ul = document.getElementById('list');
         const li = document.createElement('li');
         li.innerText = this.format(this.times);
-        ul.appendChild(li);
+        this.ul.appendChild(li);
     }
 
     removeAll(){
-        const ul = document.getElementById('list');
-        ul.innerHTML = '';
+        //const ul = document.getElementById('list');
+        this.ul.innerHTML = '';
     }
 
     start() {

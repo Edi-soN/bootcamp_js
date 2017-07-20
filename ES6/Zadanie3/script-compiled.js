@@ -12,6 +12,7 @@ var Stopwatch = function () {
         this.display = display;
         this.reset();
         this.print(this.times);
+        this.ul = document.getElementById('list');
     }
 
     _createClass(Stopwatch, [{
@@ -37,16 +38,16 @@ var Stopwatch = function () {
     }, {
         key: 'add',
         value: function add() {
-            var ul = document.getElementById('list');
+            //const ul = document.getElementById('list');
             var li = document.createElement('li');
             li.innerText = this.format(this.times);
-            ul.appendChild(li);
+            this.ul.appendChild(li);
         }
     }, {
         key: 'removeAll',
         value: function removeAll() {
-            var ul = document.getElementById('list');
-            ul.innerHTML = '';
+            //const ul = document.getElementById('list');
+            this.ul.innerHTML = '';
         }
     }, {
         key: 'start',

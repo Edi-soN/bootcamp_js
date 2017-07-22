@@ -1,0 +1,59 @@
+form {
+  margin: auto;
+  position: relative;
+  width: 400px;
+  height: 75px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 24px;
+  font-weight: bold;
+  color: #09C;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #999;
+  border: inset 1px solid #333;
+}
+
+input {
+  width: 375px;
+  display: block;
+  border: 1px solid #999;
+  height: 25px;
+}
+
+.user {
+  margin: auto;
+  position: relative;
+  width: 400px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 24px;
+  font-weight: bold;
+  color: #09C;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #999;
+  border: inset 1px solid #333;
+}
+
+img {
+    border-radius: 5px 5px 5px 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+a {
+  border-radius: 5px 5px 5px 5px;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  cursor: pointer;
+  font-size: 18px;
+}

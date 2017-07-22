@@ -60,11 +60,13 @@ var Stopwatch = function (_React$Component) {
             var _this2 = this;
 
             if (!this.state.running) {
-                this.setState({ running: true });
                 var interval = setInterval(function () {
                     return _this2.step();
                 }, 10);
-                this.setState({ watch: interval });
+                this.setState({
+                    running: true,
+                    watch: interval
+                });
             }
         }
     }, {

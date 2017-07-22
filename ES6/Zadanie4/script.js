@@ -16,8 +16,8 @@ class Stopwatch extends React.Component {
     reset() {
         this.setState({times: {
             minutes: 0,
-               seconds: 0,
-               miliseconds:0
+            seconds: 0,
+            miliseconds:0
             }
         });
     }
@@ -36,9 +36,11 @@ class Stopwatch extends React.Component {
 
     start() {
         if (!this.state.running) {
-            this.setState({running: true});
             let interval = setInterval(() => this.step(), 10);
-            this.setState({watch: interval});
+            this.setState({
+                running: true,
+                watch: interval
+            });
         }
     }
 

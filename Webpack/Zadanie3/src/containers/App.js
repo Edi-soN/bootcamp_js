@@ -5,26 +5,30 @@ import Title from '../components/Title';
 import TodoList from '../components/TodoList';
 
 class App extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            data: [{
-                id: 1,
-                text: 'clean room'
-            }, {
-                id: 2,
-                text: 'wash the dishes'
-            }, {
-                id: 3,
-                text: 'feed my cat'
-            }],
+            data: [
+                {
+                    id: 1,
+                    text: 'clean room'
+                }, 
+                {
+                    id: 2,
+                    text: 'wash the dishes'
+                },
+                {
+                    id: 3,
+                    text: 'feed my cat'
+                }
+            ],
             title: 'ToDo List'
         };
     }
     addTodo(val){
         const todo = {
             text: val,
-            id: uuid.v4(),
+            id: uuid.v4()
         };
         const data = [...this.state.data, todo];
         this.setState({data});

@@ -1,0 +1,7 @@
+.TodoList li {
+	font-size: 20px;
+    list-style-type: upper-roman;
+    margin: 10px 0;
+    width: 200px;
+    text-align: center;
+}

@@ -1,8 +1,10 @@
 .Title {
-    color: brown;
-    animation: blinker 1s linear infinite;
+  color: brown;
+  animation: blinker 1s linear infinite;
 }
 
-@keyframes blinker {  
-  50% { opacity: 0; }
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }

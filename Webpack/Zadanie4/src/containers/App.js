@@ -6,7 +6,7 @@ import TodoList from '../components/TodoList';
 import TodoForm from '../components/TodoForm';
 
 class App extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             data: [{
@@ -26,11 +26,10 @@ class App extends React.Component {
     addTodo(val){
         const todo = {
             text: val,
-            id: uuid.v4(),
+            id: uuid.v4()
         };
         const data = [...this.state.data, todo];
-        this.setState({data});
-        this.setState({value: ''});
+        this.setState({data, value: ''});
     }
     removeTodo(id) {
         const remainder = this.state.data.filter(todo => todo.id !== id);

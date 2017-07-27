@@ -3,7 +3,7 @@ import style from './Todo.css';
 
 const Todo = props => {
 	return (
-		<li className={style.Todo} onClick={() => props.remove(props.id)} >{props.text}</li>
+		<li className={style.Todo}>{props.text}   <i className="glyphicon glyphicon-trash" onClick={() => props.remove(props.id)}></i></li>
 	)
 }
 

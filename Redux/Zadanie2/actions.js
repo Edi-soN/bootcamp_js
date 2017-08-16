@@ -1,5 +1,6 @@
 import uuid from 'uuid';
 
+export const ADD_COMMENT = 'REMOVE_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 export const EDIT_COMMENT = 'EDIT_COMMENT';
 export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';

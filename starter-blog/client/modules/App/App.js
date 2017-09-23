@@ -9,6 +9,7 @@ import Helmet from 'react-helmet';
 import DevTools from './components/DevTools';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Navigation from './components/Navigation/Navigation';
 
 // Import Actions
 import { toggleAddPost } from './AppActions';
@@ -53,6 +54,7 @@ export class App extends Component {
             intl={this.props.intl}
             toggleAddPost={this.toggleAddPostSection}
           />
+          <Navigation />
           <div className={styles.container}>
             {this.props.children}
           </div>
